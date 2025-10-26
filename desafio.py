@@ -176,7 +176,8 @@ if __name__ == "__main__":
                 break
 
         if usuario:
-            conta = retorna_conta(usuario, contas)
+            if not conta:
+                conta = retorna_conta(usuario, contas)
             limpar_tela()
 
             print("\n" + "="*40)
